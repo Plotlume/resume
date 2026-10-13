@@ -96,10 +96,17 @@
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">b</span><span>StoreKit 2 订阅，会员权益由服务端核验。</span></div>
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">c</span><span>TypeScript（Fastify）+ PostgreSQL；自建内容后台，可以导入、预览、发布和回退作品。</span></div>
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">d</span><span>独立走完 App Store 审核：回复审核问询，被拒后修改并重新提交。</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">e</span><span>1.1 版新增 Watch 频道，可以看由小说改编的 AI 短剧。</span></div>
+        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">e</span><span>1.1.0 版已在 App Store 上线，新增 Watch 频道，可以看由小说改编的 AI 短剧；评分 5.0。</span></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px">
         <span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">SwiftUI</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">TypeScript</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">PostgreSQL</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">StoreKit 2</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">AI 辅助编程</span>
+      </div>
+      <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" aria-label="App Store 上的 Plotlume：1.1.0 版，评分 5.0" style="display:block;background:#F5F5F0;border-radius:18px;overflow:hidden;border:1.5px solid #0B0B0B">
+        <img src="../assets/img/plotlume-appstore.jpg" alt="Plotlume 的 App Store 页面：评分 5.0、1.1.0 版、开发者郭雨桐" loading="lazy" style="height:auto">
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" style="padding:12px 20px;background:#0B0B0B;color:#C8F169;border-radius:999px;font-weight:700;font-size:14px">App Store ↗</a>
+        <a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener" style="padding:12px 20px;border:1.5px solid #0B0B0B;border-radius:999px;font-weight:700;font-size:14px">在线阅读故事 ↗</a>
       </div>
     </div>
   </section>
@@ -149,14 +156,40 @@
   </section>
 
   <section id="p04" aria-labelledby="h-p04" style="background:#FF8A3D;color:#0B0B0B;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:center">
-    <div style="flex:1 1 540px;min-width:0;background:#0B0B0B;border-radius:18px;overflow:hidden">
-      <img src="../assets/img/juice.jpg" alt="随餐果蔬汁包装正反面，品牌“外卖达人”" loading="lazy" style="height:auto">
+    <div style="flex:1 1 540px;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#0B0B0B;border-radius:18px;overflow:hidden">
+        <img src="../assets/img/juice.jpg" alt="随餐果蔬汁包装正反面，品牌“外卖达人”" loading="lazy" style="height:auto">
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div class="player" data-video="../assets/video/juice-line.mp4" style="aspect-ratio:9/16">
+            <img src="../assets/img/juice-line-poster.jpg" alt="代工厂灌装线上的吸嘴袋" loading="lazy">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+              <button type="button" class="play" aria-label="播放灌装线视频" style="width:56px;height:56px;background:#FF8A3D"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button>
+            </div>
+          </div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">灌装生产线 · 0:09</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="../assets/img/juice-factory.jpg" alt="工厂工人检查成品吸嘴袋" loading="lazy"></div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">成品质检</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="../assets/img/juice-pour.jpg" alt="橙色果蔬汁从吸嘴袋倒入玻璃杯" loading="lazy"></div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">产品实拍</figcaption>
+        </figure>
+      </div>
     </div>
     <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:20px">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px">04 · 第一次创业 · 品牌“外卖达人”</div>
       <h2 id="h-p04" style="margin:0;font-weight:500;font-size:clamp(40px,4.8vw,68px);line-height:0.95;letter-spacing:-0.045em">为外卖而生的果蔬汁。</h2>
       <p style="margin:0;text-wrap:pretty">离开叶檀财经后的第一次创业。产品是 NFC 非浓缩还原果蔬汁，配料是胡萝卜、苹果、柠檬和牛油果，0 添加，装在 100mL 吸嘴袋里，定位外卖随餐饮品。</p>
       <p style="margin:0;text-wrap:pretty">从产品定义、配方到包装设计全程主导，并对接有资质的代工厂完成生产。</p>
+      <p style="margin:0;text-wrap:pretty">通过自营网店销售，20 袋装售价 68 元。</p>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+        <div style="background:#F5F5F0;border-radius:14px;overflow:hidden;border:1.5px solid #0B0B0B"><img src="../assets/img/juice-order.jpg" alt="自营网店的一笔订单：10 件，每件 68 元" loading="lazy" style="height:auto"></div>
+        <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">网店真实订单</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -214,6 +247,7 @@
     <a href="mailto:guoyutong110@gmail.com" style="font-weight:500;font-size:clamp(30px,5.6vw,80px);line-height:1;letter-spacing:-0.045em;color:#C8F169;word-break:break-all">guoyutong110@gmail.com</a>
     <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2A2A2A;padding-top:16px;font-size:13px;color:#8A8A85">
       <span>面向全球的工作机会 · 可远程或迁居</span>
+      <span style="display:flex;gap:16px;flex-wrap:wrap"><a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener">App Store 上的 Plotlume ↗</a><a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener">Plotlume 故事网站 ↗</a></span>
       <span>© 2026 郭雨桐</span>
     </div>
   </footer>

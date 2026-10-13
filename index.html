@@ -96,10 +96,17 @@
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">b</span><span>StoreKit 2 subscriptions, entitlements verified server-side.</span></div>
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">c</span><span>TypeScript (Fastify) + PostgreSQL; custom CMS to import, preview, publish and roll back.</span></div>
         <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">d</span><span>Took it through App Store review solo — answered queries, fixed and resubmitted after rejection.</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">e</span><span>v1.1 adds the Watch channel: AI short dramas adapted from the novels.</span></div>
+        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">e</span><span>v1.1.0, now on the App Store, adds the Watch channel: AI short dramas adapted from the novels. Rated 5.0.</span></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px">
         <span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">SwiftUI</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">TypeScript</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">PostgreSQL</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">StoreKit 2</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">AI-assisted coding</span>
+      </div>
+      <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" aria-label="Plotlume on the App Store: version 1.1.0, rated 5.0" style="display:block;background:#F5F5F0;border-radius:18px;overflow:hidden;border:1.5px solid #0B0B0B">
+        <img src="assets/img/plotlume-appstore.jpg" alt="App Store listing for Plotlume: 5.0 rating, version 1.1.0, developer Guo Yutong" loading="lazy" style="height:auto">
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" style="padding:12px 20px;background:#0B0B0B;color:#C8F169;border-radius:999px;font-weight:700;font-size:14px">App Store ↗</a>
+        <a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener" style="padding:12px 20px;border:1.5px solid #0B0B0B;border-radius:999px;font-weight:700;font-size:14px">Read the stories online ↗</a>
       </div>
     </div>
   </section>
@@ -149,14 +156,40 @@
   </section>
 
   <section id="p04" aria-labelledby="h-p04" style="background:#FF8A3D;color:#0B0B0B;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:center">
-    <div style="flex:1 1 540px;min-width:0;background:#0B0B0B;border-radius:18px;overflow:hidden">
-      <img src="assets/img/juice.jpg" alt="Front and back of the meal-pairing juice pouch, brand 外卖达人" loading="lazy" style="height:auto">
+    <div style="flex:1 1 540px;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#0B0B0B;border-radius:18px;overflow:hidden">
+        <img src="assets/img/juice.jpg" alt="Front and back of the meal-pairing juice pouch, brand 外卖达人" loading="lazy" style="height:auto">
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div class="player" data-video="assets/video/juice-line.mp4" style="aspect-ratio:9/16">
+            <img src="assets/img/juice-line-poster.jpg" alt="Pouches on the filling line at the contract factory" loading="lazy">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+              <button type="button" class="play" aria-label="Play the filling-line video" style="width:56px;height:56px;background:#FF8A3D"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button>
+            </div>
+          </div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">FILLING LINE · 0:09</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="assets/img/juice-factory.jpg" alt="Factory staff checking finished pouches" loading="lazy"></div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">QUALITY CHECK</figcaption>
+        </figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="assets/img/juice-pour.jpg" alt="Carrot-orange juice pouring from a pouch into a glass" loading="lazy"></div>
+          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">THE PRODUCT</figcaption>
+        </figure>
+      </div>
     </div>
     <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:20px">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px">04 · FIRST VENTURE · BRAND “外卖达人”</div>
       <h2 id="h-p04" style="margin:0;font-weight:500;font-size:clamp(40px,4.8vw,68px);line-height:0.95;letter-spacing:-0.045em">Juice made for takeout.</h2>
       <p style="margin:0;text-wrap:pretty">My first venture after Ye Tan Finance: NFC, not-from-concentrate carrot, apple, lemon and avocado juice with zero additives, in a 100 mL spouted pouch — positioned as the drink that comes with a delivery meal.</p>
       <p style="margin:0;text-wrap:pretty">Led product definition, formula and packaging end to end, and brought it into production with a licensed contract manufacturer.</p>
+      <p style="margin:0;text-wrap:pretty">Sold through our own online store, at ¥68 for a pack of 20.</p>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
+        <div style="background:#F5F5F0;border-radius:14px;overflow:hidden;border:1.5px solid #0B0B0B"><img src="assets/img/juice-order.jpg" alt="An order from the brand's online store: 10 packs at ¥68" loading="lazy" style="height:auto"></div>
+        <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">A REAL ORDER FROM THE STORE</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -214,6 +247,7 @@
     <a href="mailto:guoyutong110@gmail.com" style="font-weight:500;font-size:clamp(30px,5.6vw,80px);line-height:1;letter-spacing:-0.045em;color:#C8F169;word-break:break-all">guoyutong110@gmail.com</a>
     <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2A2A2A;padding-top:16px;font-size:13px;color:#8A8A85">
       <span>Open to roles worldwide · Remote or relocation</span>
+      <span style="display:flex;gap:16px;flex-wrap:wrap"><a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener">Plotlume on the App Store ↗</a><a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener">Plotlume stories ↗</a></span>
       <span>© 2026 Guo Yutong</span>
     </div>
   </footer>
