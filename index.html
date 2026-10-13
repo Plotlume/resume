@@ -2,260 +2,735 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Guo Yutong — Storyteller · AI Filmmaker · Builder</title>
 <meta name="description" content="Portfolio of Guo Yutong: contracted fiction writer, AI filmmaker and solo builder of Plotlume, a story and short-drama iOS app live in the US and Canada.">
-<link rel="icon" href="assets/img/plotlume-icon.jpg">
+<meta name="theme-color" content="#E8E6E1">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="icon" href="assets/hd/plotlume-icon.webp" type="image/webp">
 <link rel="alternate" hreflang="zh" href="zh/index.html">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-</head>
-<body>
-<div id="top" style="background:#0B0B0B;color:#F5F5F0;font-family:'Helvetica Neue',Helvetica,'Noto Sans SC',Arial,sans-serif;font-size:16px;line-height:1.5;min-height:100vh;padding:0 12px 12px">
-<div style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400..700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#E8E6E1;
+  --ink:#161513;
+  --ink-2:#34322E;
+  --muted:#5D5A54;
+  --rule:#C6C2BA;
+  --accent:#C8F560;
+  --serif:"Newsreader","Noto Serif SC",Georgia,"Times New Roman",serif;
+  --sans:"Schibsted Grotesk","Noto Sans SC","Helvetica Neue",Arial,sans-serif;
+  --rail:clamp(276px,24vw,340px);
+  --g:clamp(16px,6vw,104px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:24px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+figure{margin:0}
+::selection{background:var(--accent);color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-80px;z-index:50;padding:12px 16px;background:var(--ink);color:var(--ground);font-size:14px;text-decoration:none}
+.skip:focus{top:16px}
+.zh{font-family:"Noto Sans SC",var(--sans)}
 
-  <header style="position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0B0B0B;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;align-items:center;padding:16px 8px;border-bottom:1px solid #2A2A2A;font-size:13px">
-    <a href="#top" style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Guo Yutong</a>
-    <span style="color:#8A8A85">Storyteller, AI Filmmaker, Builder</span>
-    <span style="color:#8A8A85">Kunming (UTC+8) → Worldwide</span>
-    <nav aria-label="Page" style="display:flex;gap:18px;justify-content:flex-end;align-items:center;flex-wrap:wrap">
-      <a href="#work">Work</a><a href="#experience">CV</a><a href="#contact">Contact</a>
-      <div style="display:flex;border-radius:999px;overflow:hidden;border:1px solid #2A2A2A;font-family:'JetBrains Mono',monospace;font-size:11px">
-        <span style="padding:5px 11px;background:#C8F169;color:#0B0B0B" aria-current="true">EN</span>
-        <a href="zh/index.html" lang="zh" style="padding:5px 11px;color:#8A8A85">中文</a>
-      </div>
+/* ---------- Layout ---------- */
+.page{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);min-height:100vh}
+.col{min-width:0;padding:0 var(--g)}
+.wrap{max-width:920px;margin:0 auto}
+
+/* ---------- Rail (sticky left column) ---------- */
+.rail{position:sticky;top:0;height:100vh;height:100dvh;display:flex;flex-direction:column;padding:44px 36px 36px;border-right:1px solid var(--rule);overflow-y:auto}
+.name{display:inline-block;font:400 34px/1 var(--serif);letter-spacing:-.018em;text-decoration:none}
+.name-zh{display:block;margin-top:10px;font-size:13px;letter-spacing:.32em;color:var(--muted)}
+.rail-pos{margin-top:32px;font:italic 300 22px/1.28 var(--serif);letter-spacing:-.005em;max-width:13em}
+.rail-loc{margin-top:12px;font-size:13px;color:var(--muted)}
+.rail-nav{margin-top:56px}
+.rail-nav ol{list-style:none;margin:0;padding:0}
+.rail-nav a{display:flex;align-items:baseline;gap:12px;padding:5px 0;font:400 24px/1.25 var(--serif);text-decoration:none;color:var(--muted);transition:color .2s}
+.rail-nav a::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;border:1px solid var(--rule);transform:translateY(-.22em);transition:background .2s,border-color .2s}
+.rail-nav a:hover,.rail-nav a[aria-current]{color:var(--ink)}
+.rail-nav a[aria-current]::before{background:var(--accent);border-color:var(--ink)}
+.rail-nav small{font:400 12px/1 var(--sans);letter-spacing:.06em;color:var(--muted)}
+.rail-foot{margin-top:auto;padding-top:40px}
+.lang{display:flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em}
+.lang span[aria-current]{font-weight:600;border-bottom:1.5px solid var(--ink);padding-bottom:1px}
+.lang .sep{color:var(--rule)}
+.lang a{color:var(--muted);text-decoration:none;padding-bottom:2px}
+.lang a:hover{color:var(--ink)}
+.rail-mail{display:inline-block;margin-top:24px;font-size:14px;overflow-wrap:anywhere}
+.avail{display:flex;align-items:center;gap:9px;margin-top:10px;font-size:13px;color:var(--muted)}
+.avail::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--ink)}
+
+/* ---------- Shared editorial parts ---------- */
+section{padding-top:clamp(96px,11vw,168px)}
+.folio{display:flex;align-items:baseline;gap:16px;padding-top:12px;border-top:1px solid var(--ink);font-size:12px;line-height:1.4;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.folio .n{font:italic 400 16px/1 var(--serif);letter-spacing:0;text-transform:none;color:var(--ink)}
+.folio .r{margin-left:auto;text-align:right}
+.folio h2{font:inherit;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.lead{font:300 clamp(20px,1.85vw,25px)/1.42 var(--serif);letter-spacing:-.004em;text-wrap:pretty}
+.body p+p{margin-top:16px}
+.body p{text-wrap:pretty;max-width:62ch}
+.kicker{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.tags{font-size:14px;color:var(--muted);line-height:1.7}
+.tags b{font-weight:500;color:var(--ink)}
+
+/* museum label */
+.label{margin-top:14px;font-size:13px;line-height:1.45;color:var(--muted);max-width:36ch}
+.label::before{content:"";display:block;width:22px;height:1px;margin-bottom:9px;background:var(--ink)}
+.label b{display:block;font-weight:600;color:var(--ink)}
+.label i{display:block;font:italic 400 16px/1.25 var(--serif);color:var(--ink);margin-bottom:2px}
+
+/* project header */
+.p-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:44px}
+.p-title{font:400 clamp(54px,7.6vw,116px)/.9 var(--serif);letter-spacing:-.032em;text-wrap:balance}
+.p-title em{font-style:italic;font-weight:300}
+.p-deck{margin-top:18px;font:italic 300 clamp(20px,2vw,28px)/1.25 var(--serif);color:var(--ink-2);max-width:30ch;text-wrap:balance}
+.p-icon{flex:none;width:72px;height:72px;border-radius:22.5%}
+.media{margin-top:clamp(40px,5vw,64px)}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin:0}
+.facts>div{padding:12px 0 18px;border-top:1px solid var(--rule)}
+.facts dt{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:6px 0 0;font:400 clamp(26px,2.4vw,32px)/1.08 var(--serif);letter-spacing:-.012em;font-variant-numeric:lining-nums}
+.facts dd small{display:block;margin-top:4px;font:400 13px/1.4 var(--sans);letter-spacing:0;color:var(--muted)}
+.facts.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* buttons */
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:1px solid var(--ink);background:var(--ink);color:var(--ground);font:500 15px/1.2 var(--sans);text-decoration:none;transition:background .2s,color .2s}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--accent);color:var(--ink)}
+.btn span{font-size:.9em}
+
+/* players */
+.player{position:relative;overflow:hidden;background:#0E0E0D}
+.player>img{width:100%;height:100%;object-fit:cover}
+.player video{position:absolute;inset:0;width:100%;height:100%;background:#000;object-fit:contain}
+.play{position:absolute;inset:0;display:block;width:100%;padding:0;border:0;background:transparent;cursor:pointer;color:var(--ink)}
+.chip{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px 0 14px;background:var(--ground);font:500 14px/1 var(--sans);transition:background .2s}
+.chip svg{width:12px;height:12px}
+.chip .d{color:var(--muted)}
+.play:hover .chip{background:var(--accent)}
+.play:focus-visible{outline:none}
+.play:focus-visible .chip{box-shadow:0 0 0 2px var(--ink),0 0 0 4px var(--ground)}
+.r169{aspect-ratio:16/9}
+.r219{aspect-ratio:1920/822}
+.r916{aspect-ratio:9/16}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:clamp(56px,8vw,120px)}
+.m-meta{display:none}
+.hero h1{margin-top:32px;font:300 clamp(38px,5.3vw,78px)/1.02 var(--serif);letter-spacing:-.024em;text-wrap:balance}
+.hero h1 em{font-style:italic;background:linear-gradient(transparent 64%,var(--accent) 64%,var(--accent) 90%,transparent 90%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero-foot{margin-top:clamp(40px,5vw,64px);align-items:start}
+.hero-bio{grid-column:1/8;max-width:58ch;text-wrap:pretty}
+.hero-avail{grid-column:9/13;margin-top:0}
+
+/* ---------- Work index ---------- */
+.toc{list-style:none;margin:0;padding:0}
+.toc-head,.toc a{display:grid;grid-template-columns:44px minmax(0,1.7fr) minmax(0,1fr) minmax(0,1.15fr);gap:20px;align-items:baseline}
+.toc-head{padding:24px 0 10px;border-bottom:1px solid var(--rule);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.toc a{padding:20px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.toc .n{font:italic 400 16px/1 var(--serif);color:var(--muted)}
+.toc .t{font:400 clamp(24px,2.6vw,34px)/1.1 var(--serif);letter-spacing:-.016em}
+.toc .m{font-size:14px;line-height:1.45;color:var(--muted)}
+.toc .t{background:linear-gradient(var(--accent),var(--accent)) 0 88%/0 .26em no-repeat;transition:background-size .3s}
+.toc a:hover .t,.toc a:focus-visible .t{background-size:100% .26em}
+.toc a:hover .n{color:var(--ink)}
+
+/* ---------- 01 Plotlume ---------- */
+.pl-copy{margin-top:clamp(48px,6vw,80px)}
+.pl-copy .lead{grid-column:1/7}
+.points{grid-column:8/13;list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);counter-reset:pt}
+.points li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:6px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5;counter-increment:pt}
+.points li::before{content:counter(pt,lower-alpha);font:italic 400 17px/1.3 var(--serif);color:var(--muted)}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3.4vw,44px);margin-top:clamp(64px,8vw,104px)}
+.phones img{width:100%;max-width:260px;filter:drop-shadow(0 18px 28px rgba(22,21,19,.14))}
+.store{margin-top:clamp(64px,8vw,104px);align-items:start}
+.store-shot{grid-column:1/7;display:block;max-width:440px;text-decoration:none}
+.store-shot img{width:100%;box-shadow:0 0 0 1px rgba(22,21,19,.08)}
+.store-shot:hover .label b{text-decoration:underline}
+.store-side{grid-column:8/13}
+.store-side .tags{margin-top:20px}
+
+/* ---------- 02 Five Years Too Late: a dark screening room inside the paper page ---------- */
+.col{overflow-x:clip}
+#p02{--ground:#121110;--ink:#ECE8E0;--ink-2:#CFC9BE;--muted:#A29B8F;--rule:#3B3834;position:relative;margin-top:clamp(96px,11vw,168px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(64px,8vw,112px);background:var(--ground);color:var(--ink);box-shadow:0 0 0 100vmax var(--ground);clip-path:inset(0 -100vmax)}
+#p02 .chip{background:#ECE8E0;color:#161513}
+#p02 .chip .d{color:#5D5A54}
+#p02 .play:hover .chip{background:var(--accent);color:#161513}
+#p02 .play:focus-visible .chip{box-shadow:0 0 0 2px #ECE8E0,0 0 0 4px #121110}
+#p02 ::selection{color:#161513}
+#p02+section{padding-top:clamp(96px,11vw,152px)}
+.fy-copy{margin-top:clamp(48px,6vw,72px);align-items:start}
+.fy-copy .body{grid-column:1/9}
+.fy-copy .tags{margin-top:20px}
+.pipe{grid-column:1/13;margin-top:40px}
+.pipe ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}
+.pipe p{max-width:62ch}
+.pipe ol{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--ink);counter-reset:st}
+.pipe li{display:flex;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px;counter-increment:st}
+.pipe li::before{content:counter(st);font:italic 400 17px/1 var(--serif);color:var(--muted);width:14px}
+.pipe p{margin-top:14px;font-size:14px;line-height:1.55;color:var(--muted)}
+
+/* ---------- 03 Writing ---------- */
+.covers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2.6vw,32px)}
+.covers img{width:100%;box-shadow:0 1px 0 rgba(22,21,19,.06),0 14px 30px -14px rgba(22,21,19,.35)}
+.wr-copy{margin-top:clamp(48px,6vw,72px);align-items:start}
+.wr-copy .body{grid-column:1/7}
+.wr-copy .facts{grid-column:8/13;grid-template-columns:1fr}
+
+/* ---------- 04 Juice ---------- */
+.ju-a{align-items:start}
+.ju-pack{grid-column:1/8;max-width:600px}
+.ju-a .body{grid-column:8/13}
+.trip{display:grid;grid-template-columns:.5625fr .75fr .745fr;gap:clamp(12px,2.4vw,24px);margin-top:clamp(48px,6vw,72px);align-items:start}
+.trip img{width:100%}
+.ju-b{margin-top:clamp(48px,6vw,72px);align-items:start}
+.ju-order{grid-column:1/8;max-width:520px}
+.ju-order img{width:100%;box-shadow:0 0 0 1px rgba(22,21,19,.08)}
+.ju-b .facts{grid-column:8/13;grid-template-columns:1fr}
+
+/* ---------- Experience ---------- */
+.exp-title{margin-top:40px;font:400 clamp(48px,6vw,88px)/.95 var(--serif);letter-spacing:-.03em}
+.phases{margin-top:clamp(40px,5vw,64px)}
+.phase{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;padding:28px 0 12px;border-top:1px solid var(--rule)}
+.phase:first-child{border-top-color:var(--ink)}
+.when{font:italic 300 26px/1.1 var(--serif);letter-spacing:-.01em;font-variant-numeric:lining-nums}
+.phase h3{margin-top:8px;font-size:14px;line-height:1.45;color:var(--muted);max-width:22ch}
+.jobs{list-style:none;margin:0;padding:0}
+.job{padding-bottom:22px}
+.job+.job{padding-top:18px;border-top:1px solid var(--rule)}
+.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px}
+.job-org{font-weight:600}
+.job-role{color:var(--muted)}
+.job-date{margin-left:auto;font-size:13px;color:var(--muted);white-space:nowrap}
+.job p{margin-top:8px;font-size:15px;line-height:1.6;color:var(--ink-2);max-width:62ch;text-wrap:pretty}
+.gallery{display:flex;gap:20px;margin-top:20px}
+.gallery figure{width:min(200px,44%)}
+.gallery img{width:100%;aspect-ratio:1145/2000;object-fit:cover;object-position:top}
+
+/* ---------- Skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.skill{padding-top:14px;border-top:1px solid var(--ink)}
+.skill .n{font:italic 400 16px/1 var(--serif);color:var(--muted)}
+.skill h3{margin:28px 0 12px;font:400 clamp(26px,2.4vw,32px)/1.08 var(--serif);letter-spacing:-.015em}
+.skill p{font-size:15px;line-height:1.6;color:var(--ink-2);text-wrap:pretty}
+
+/* ---------- Contact ---------- */
+.contact{padding:clamp(112px,13vw,184px) 0 40px}
+.mail{display:inline-block;margin-top:40px;font:300 clamp(28px,5.4vw,76px)/1.05 var(--serif);letter-spacing:-.025em;text-decoration:none;overflow-wrap:anywhere;background:linear-gradient(var(--ink),var(--ink)) 0 100%/100% 1px no-repeat;padding-bottom:6px;transition:background-size .3s}
+.mail:hover{background-image:linear-gradient(var(--accent),var(--accent));background-size:100% 40%}
+.contact-meta{margin-top:40px;align-items:start;font-size:14px}
+.contact-meta .avail-list{grid-column:1/7;color:var(--ink-2)}
+.contact-links{grid-column:1/8;display:flex;flex-direction:column;gap:6px}
+.contact-links a{text-decoration:none;border-bottom:1px solid var(--rule);padding:8px 0;display:flex;justify-content:space-between;gap:16px}
+.contact-links a:hover{border-color:var(--ink)}
+.copy{display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:0 16px;border:1px solid var(--rule);background:transparent;color:var(--ink);font:500 14px/1 var(--sans);cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+.copy[hidden]{display:none}
+.colophon{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:88px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.04em;color:var(--muted)}
+.colophon a{text-decoration:none}
+.colophon a:hover{color:var(--ink)}
+
+/* ---------- Tablet & phone: rail becomes a top bar ---------- */
+@media (max-width:1000px){
+  .page{display:block}
+  .rail{z-index:20;height:auto;flex-direction:row;align-items:center;gap:16px;padding:12px var(--g);padding-top:calc(12px + env(safe-area-inset-top,0px));border-right:0;border-bottom:1px solid var(--rule);background:var(--ground);overflow:visible}
+  .rail-id{flex:1;min-width:0}
+  .name{font-size:21px;white-space:nowrap}
+  .name-zh,.rail-pos,.rail-loc,.rail-mail,.avail{display:none}
+  .rail-nav{margin:0}
+  .rail-nav ol{display:flex;gap:16px}
+  .rail-nav a{min-height:44px;align-items:center;padding:0;font:500 14px/1 var(--sans);color:var(--muted)}
+  .rail-nav a::before{display:none}
+  .rail-nav a[aria-current]{color:var(--ink);box-shadow:inset 0 -1.5px var(--ink)}
+  .rail-nav small{display:none}
+  .rail-foot{margin:0;padding:0 0 0 16px;border-left:1px solid var(--rule)}
+  .m-meta{display:block;margin-top:28px;font-size:14px;line-height:1.55;color:var(--muted)}
+  .lang a,.lang span[aria-current]{display:inline-flex;align-items:center;min-height:44px}
+  .rail{padding-top:calc(2px + env(safe-area-inset-top,0px));padding-bottom:2px}
+  .rail{position:sticky;top:0}
+  html{scroll-padding-top:72px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .grid>*{grid-column:1/-1 !important}
+  .hero-avail{margin-top:32px}
+  .toc-head{display:none}
+  .toc a{grid-template-columns:30px minmax(0,1fr);gap:4px 12px;padding:18px 0}
+  .toc .m{grid-column:2}
+  .toc .m+.m{margin-top:-2px}
+  .p-head{margin-top:32px}
+  .p-icon{width:56px;height:56px}
+  .chip{left:10px;top:auto;bottom:10px;height:34px;gap:8px;padding:0 12px 0 10px;font-size:13px}
+  #p02 .media{margin-left:calc(-1 * var(--g));margin-right:calc(-1 * var(--g))}
+  #p02 .chip{top:10px;bottom:auto}
+  #p02 .media .label{margin-left:var(--g)}
+  .pipe ol{grid-template-columns:minmax(0,1fr)}
+  .chip svg{width:10px;height:10px}
+  .points{margin-top:32px}
+  .phones{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--g);margin-left:calc(-1 * var(--g));margin-right:calc(-1 * var(--g));padding:0 var(--g) 12px;scrollbar-width:none}
+  .phones::-webkit-scrollbar{display:none}
+  .phones figure{flex:0 0 min(62%,240px);scroll-snap-align:start}
+  .store-side{margin-top:40px}
+  .pipe{margin-top:40px}
+  .wr-copy .facts,.ju-b .facts{margin-top:32px}
+  .ju-a .body{margin-top:32px}
+  .trip{grid-template-columns:1.6fr 1fr;grid-template-rows:auto auto}
+  .trip figure:first-child{grid-row:1/3}
+  .trip .label{font-size:12px}
+  .ju-order{margin-bottom:0}
+  .phase{grid-template-columns:minmax(0,1fr);gap:16px}
+  .job-date{margin-left:0;width:100%}
+  .skills{grid-template-columns:minmax(0,1fr);gap:40px}
+  .contact-links{margin-top:32px}
+  .facts.three{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:370px){
+  .rail{flex-wrap:wrap;row-gap:0}
+  .rail-id{flex:1 0 100%;padding-top:8px}
+}
+@media (max-width:400px){
+  .rail{gap:12px}
+  .rail-nav ol{gap:12px}
+  .rail-foot{padding-left:12px}
+  .name{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+
+  <header class="rail">
+    <div class="rail-id">
+      <a class="name" href="#top">Guo Yutong</a>
+      <span class="name-zh zh" lang="zh-CN">郭雨桐</span>
+      <p class="rail-pos">Storyteller, AI&nbsp;filmmaker, builder.</p>
+      <p class="rail-loc">Kunming (UTC+8) → Worldwide</p>
+    </div>
+    <nav class="rail-nav" aria-label="Page">
+      <ol>
+        <li><a href="#work" data-nav="work">Work <small>01–04</small></a></li>
+        <li><a href="#experience" data-nav="cv">CV</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ol>
     </nav>
+    <div class="rail-foot">
+      <div class="lang" role="group" aria-label="Language">
+        <span aria-current="true">EN</span><span class="sep" aria-hidden="true">/</span><a class="zh" href="zh/index.html" lang="zh-CN" hreflang="zh">中文</a>
+      </div>
+      <a class="rail-mail" href="mailto:guoyutong110@gmail.com">guoyutong110@gmail.com</a>
+      <p class="avail">Open to roles worldwide</p>
+    </div>
   </header>
 
-  <main style="display:flex;flex-direction:column;gap:12px">
+  <div class="col">
+  <main id="main" class="wrap">
 
-  <section style="background:#C8F169;color:#0B0B0B;border-radius:28px;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:clamp(40px,6vw,88px)">
-    <div style="display:flex;gap:8px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em">
-      <span style="padding:6px 14px;border:1.5px solid #0B0B0B;border-radius:999px">STORYTELLER</span>
-      <span style="padding:6px 14px;border:1.5px solid #0B0B0B;border-radius:999px">AI FILMMAKER</span>
-      <span style="padding:6px 14px;border:1.5px solid #0B0B0B;border-radius:999px">BUILDER</span>
-    </div>
-    <h1 style="margin:0;font-weight:500;font-size:clamp(44px,7.4vw,108px);line-height:0.96;letter-spacing:-0.045em;max-width:1100px;text-wrap:balance">From a written story to a finished film, made by one person with AI.</h1>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;border-top:1.5px solid #0B0B0B;padding-top:20px;font-size:14px">
-      <p class="span2" style="margin:0;grid-column:span 2;max-width:620px;text-wrap:pretty">Contracted fiction writer with a background in financial media and project management; first-time consumer-brand founder. I built Plotlume alone — a fiction and short-drama iOS app live in the US and Canada. I write its stories and direct its AI dramas on a production canvas I built.</p>
-      <div style="display:flex;flex-direction:column;gap:4px;font-family:'JetBrains Mono',monospace;font-size:12px">
-        <span>Open to roles worldwide</span><span>Remote or relocation</span><span>Chinese (native) · English</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" aria-label="Work index" style="background:#161616;border-radius:28px;padding:clamp(20px,3vw,36px)">
-    <div class="work-row" style="padding:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85;text-transform:uppercase;border-bottom:1px solid #2A2A2A">
-      <span>No.</span><span>Project</span><span class="hide-sm">Role</span><span class="hide-sm">Tools</span>
-    </div>
-    <a href="#p01" class="work-row" style="padding:16px 0;border-bottom:1px solid #2A2A2A;align-items:baseline">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C8F169">01</span><span style="font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-0.02em">Plotlume</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Founder, solo developer</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">SwiftUI, TypeScript, Postgres</span>
-    </a>
-    <a href="#p02" class="work-row" style="padding:16px 0;border-bottom:1px solid #2A2A2A;align-items:baseline">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#FF7AB6">02</span><span style="font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-0.02em">Five Years Too Late</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Writer, AI director</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Seedance 2.5, Midjourney, Flux</span>
-    </a>
-    <a href="#p03" class="work-row" style="padding:16px 0;border-bottom:1px solid #2A2A2A;align-items:baseline">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6B8CFF">03</span><span style="font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-0.02em">Short romance, 12 titles</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Contracted writer</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Chinese → English</span>
-    </a>
-    <a href="#p04" class="work-row" style="padding:16px 0 4px;align-items:baseline">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#FF8A3D">04</span><span style="font-size:clamp(20px,2.4vw,28px);font-weight:500;letter-spacing:-0.02em">Meal-pairing NFC juice</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Founder</span><span class="hide-sm" style="color:#8A8A85;font-size:14px">Product, formula, packaging</span>
-    </a>
-  </section>
-
-  <section id="p01" aria-labelledby="h-p01" style="background:#C8F169;color:#0B0B0B;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px)">
-    <div style="flex:1 1 540px;min-width:0;display:flex;flex-direction:column;gap:12px">
-      <div class="player" data-video="assets/video/plotlume-promo.mp4">
-        <div style="position:absolute;inset:0;background:#0B0B0B;color:#C8F169;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:clamp(20px,4vw,48px)">
-          <img src="assets/img/plotlume-icon.jpg" alt="" style="width:clamp(56px,8vw,96px);height:auto;border-radius:22%">
-          <span style="font-weight:500;font-size:clamp(36px,6vw,84px);line-height:0.95;letter-spacing:-0.045em">Plotlume</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#F5F5F0">SHORT READS. LASTING FEELINGS.</span>
-        </div>
-        <div style="position:absolute;inset:auto 0 0 0;padding:16px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none">
-          <span style="padding:6px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px;border:1px solid #C8F169">PROMO · 0:30</span>
-          <button type="button" class="play" aria-label="Play Plotlume promo video" style="width:64px;height:64px;background:#C8F169;color:#0B0B0B"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button>
+    <!-- Opening -->
+    <section class="hero" aria-labelledby="h-hero">
+      <div class="folio"><span>Portfolio</span><span class="r">2026</span></div>
+      <p class="m-meta"><span class="zh" lang="zh-CN">郭雨桐</span> · Storyteller, AI filmmaker, builder · Kunming (UTC+8) → Worldwide</p>
+      <h1 id="h-hero">From a written story to a finished film, made by <em>one person</em> with&nbsp;AI.</h1>
+      <div class="grid hero-foot">
+        <p class="hero-bio">Contracted fiction writer with a background in financial media and project management; first-time consumer-brand founder. I built Plotlume alone — a fiction and short-drama iOS app live in the US and Canada. I write its stories and direct its AI dramas on a production canvas I built.</p>
+        <div class="hero-avail label">
+          <b>Availability</b>
+          Open to roles worldwide<br>Remote or relocation<br>Chinese (native) · English
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
-        <div style="aspect-ratio:9/19.5;background:#0B0B0B;border-radius:18px;overflow:hidden"><img src="assets/img/plotlume-home.jpg" alt="Plotlume Discover deck" loading="lazy"></div>
-        <div style="aspect-ratio:9/19.5;background:#0B0B0B;border-radius:18px;overflow:hidden"><img src="assets/img/plotlume-detail.jpg" alt="Story detail for Five Years Too Late" loading="lazy"></div>
-        <div style="aspect-ratio:9/19.5;background:#0B0B0B;border-radius:18px;overflow:hidden"><img src="assets/img/plotlume-watch.jpg" alt="Watch tab playing Five Years Too Late" loading="lazy"></div>
-      </div>
-    </div>
-    <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:20px">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:52px;height:52px;flex:none;border-radius:12px;overflow:hidden;background:#0B0B0B"><img src="assets/img/plotlume-icon.jpg" alt="Plotlume app icon, a night owl"></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.6">01 · INDIE PRODUCT<br>LIVE · US / CANADA</div>
-      </div>
-      <div>
-        <h2 id="h-p01" style="margin:0;font-weight:500;font-size:clamp(44px,5.4vw,76px);line-height:0.95;letter-spacing:-0.045em">Plotlume</h2>
-        <div style="margin-top:8px;font-weight:700;font-size:18px">Short Reads. Lasting Feelings.</div>
-      </div>
-      <p style="margin:0;text-wrap:pretty">An iOS app of complete English short romance for readers in the US and Canada. Every story has a free preview; a $3.99 monthly membership unlocks the library. Designed, built and shipped by me — every story in it is mine too.</p>
-      <div style="display:flex;flex-direction:column;font-size:14px;border-top:1.5px solid #0B0B0B">
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">a</span><span>Native SwiftUI; Sign in with Apple, Google or email code.</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">b</span><span>StoreKit 2 subscriptions, entitlements verified server-side.</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">c</span><span>TypeScript (Fastify) + PostgreSQL; custom CMS to import, preview, publish and roll back.</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid rgba(11,11,11,0.25)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">d</span><span>Took it through App Store review solo — answered queries, fixed and resubmitted after rejection.</span></div>
-        <div style="display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:2px">e</span><span>v1.1.0, now on the App Store, adds the Watch channel: AI short dramas adapted from the novels. Rated 5.0.</span></div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px">
-        <span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">SwiftUI</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">TypeScript</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">PostgreSQL</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">StoreKit 2</span><span style="padding:4px 10px;background:#0B0B0B;color:#C8F169;border-radius:999px">AI-assisted coding</span>
-      </div>
-      <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" aria-label="Plotlume on the App Store: version 1.1.0, rated 5.0" style="display:block;background:#F5F5F0;border-radius:18px;overflow:hidden;border:1.5px solid #0B0B0B">
-        <img src="assets/img/plotlume-appstore.jpg" alt="App Store listing for Plotlume: 5.0 rating, version 1.1.0, developer Guo Yutong" loading="lazy" style="height:auto">
-      </a>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">
-        <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener" style="padding:12px 20px;background:#0B0B0B;color:#C8F169;border-radius:999px;font-weight:700;font-size:14px">App Store ↗</a>
-        <a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener" style="padding:12px 20px;border:1.5px solid #0B0B0B;border-radius:999px;font-weight:700;font-size:14px">Read the stories online ↗</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="p02" aria-labelledby="h-p02" style="background:#161616;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#FF7AB6">02 · AI DIRECTING · STREAMING IN PLOTLUME</div>
-        <h2 id="h-p02" style="margin:10px 0 0;font-weight:500;font-size:clamp(44px,5.4vw,76px);line-height:0.95;letter-spacing:-0.045em">Five Years Too Late</h2>
-      </div>
-      <span style="padding:6px 14px;background:#FF7AB6;color:#0B0B0B;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px">FEATURED · EP. 1 · 2:00</span>
-    </div>
-    <div class="player" data-video="assets/video/fytl-ep1.mp4" style="aspect-ratio:21/9">
-      <img src="assets/img/fytl-ep1-poster.jpg" alt="Still from Five Years Too Late, episode 1">
-      <span style="position:absolute;left:16px;top:16px;padding:6px 12px;background:rgba(11,11,11,0.75);color:#FF7AB6;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px">EP. 1 · AI SHORT DRAMA · 2:00</span>
-      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
-        <button type="button" class="play" aria-label="Play Five Years Too Late episode 1" style="width:96px;height:96px;background:#FF7AB6"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
-      <div class="span2" style="background:#FF7AB6;color:#0B0B0B;border-radius:18px;padding:22px;grid-column:span 2;display:flex;flex-direction:column;gap:12px">
-        <p style="margin:0;font-size:18px;line-height:1.45;text-wrap:pretty">A live-action-style AI short drama adapted from my own novel. Written, directed and produced by me on a self-built AI production canvas — picture and sound generated together in one pass by Seedance 2.5.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px"><span style="padding:4px 10px;background:#0B0B0B;color:#FF7AB6;border-radius:999px">Seedance 2.5</span><span style="padding:4px 10px;background:#0B0B0B;color:#FF7AB6;border-radius:999px">Midjourney</span><span style="padding:4px 10px;background:#0B0B0B;color:#FF7AB6;border-radius:999px">Flux</span><span style="padding:4px 10px;background:#0B0B0B;color:#FF7AB6;border-radius:999px">Prompt engineering</span></div>
-      </div>
-      <div style="border:1px solid #2A2A2A;border-radius:18px;padding:22px;font-size:14px;display:flex;flex-direction:column;gap:10px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">PIPELINE, SOLO</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span>Adaptation</span><span style="color:#FF7AB6">→</span><span>Character sheets</span><span style="color:#FF7AB6">→</span><span>Shot generation</span><span style="color:#FF7AB6">→</span><span>Edit</span></div>
-        <div style="color:#8A8A85">Scripts, sheets, assets and cuts live on one canvas. Vertical promos for every story come from a generator tool I wrote.</div>
-      </div>
-    </div>
-  </section>
+    <!-- Work index -->
+    <section id="work" aria-labelledby="h-work">
+      <div class="folio"><h2 id="h-work">Work</h2><span class="r">Four projects</span></div>
+      <div class="toc-head" aria-hidden="true"><span>No.</span><span>Project</span><span>Role</span><span>Tools</span></div>
+      <ol class="toc">
+        <li><a href="#p01"><span class="n">01</span><span class="t">Plotlume</span><span class="m">Founder, solo developer</span><span class="m">SwiftUI, TypeScript, Postgres</span></a></li>
+        <li><a href="#p02"><span class="n">02</span><span class="t">Five Years Too Late</span><span class="m">Writer, AI director</span><span class="m">Seedance 2.5, Midjourney, Flux</span></a></li>
+        <li><a href="#p03"><span class="n">03</span><span class="t">Short romance, 12 titles</span><span class="m">Contracted writer</span><span class="m">Chinese → English</span></a></li>
+        <li><a href="#p04"><span class="n">04</span><span class="t">Meal-pairing NFC juice</span><span class="m">Founder</span><span class="m">Product, formula, packaging</span></a></li>
+      </ol>
+    </section>
 
-  <section id="p03" aria-labelledby="h-p03" style="background:#6B8CFF;color:#0B0B0B;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-wrap:wrap;flex-direction:row-reverse;gap:clamp(24px,4vw,56px);align-items:center">
-    <div style="flex:1 1 540px;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
-      <figure style="margin:0;display:flex;flex-direction:column;gap:8px"><div style="aspect-ratio:2/3;background:#0B0B0B;border-radius:12px;overflow:hidden"><img src="assets/img/cover-no-road.jpg" alt="Cover of No Road Back to Us" loading="lazy"></div><figcaption style="font-weight:500;font-size:14px;line-height:1.25">No Road Back to Us</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:8px"><div style="aspect-ratio:2/3;background:#0B0B0B;border-radius:12px;overflow:hidden"><img src="assets/img/cover-married-boss.jpg" alt="Cover of I Married His Boss" loading="lazy"></div><figcaption style="font-weight:500;font-size:14px;line-height:1.25">I Married His Boss</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:8px"><div style="aspect-ratio:2/3;background:#0B0B0B;border-radius:12px;overflow:hidden"><img src="assets/img/cover-light-green.jpg" alt="Cover of When the Light Turns Green" loading="lazy"></div><figcaption style="font-weight:500;font-size:14px;line-height:1.25">When the Light Turns Green</figcaption></figure>
-    </div>
-    <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:20px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px">03 · WRITING</div>
-      <h2 id="h-p03" style="margin:0;font-weight:500;font-size:clamp(40px,4.8vw,68px);line-height:0.95;letter-spacing:-0.045em">12 stories.<br>All mine.</h2>
-      <p style="margin:0;text-wrap:pretty">Contracted writer at Zhangxin Story Club (掌心故事会), paid ¥40 per thousand characters. Emotional short romance, 9,000–12,000 characters each — betrayal, regret, starting over.</p>
-      <p style="margin:0;text-wrap:pretty">I rewrite my own work in English: 12 titles are in the Plotlume library, with covers I designed.</p>
-    </div>
-  </section>
+    <!-- 01 Plotlume -->
+    <section id="p01" aria-labelledby="h-p01">
+      <div class="folio"><span class="n">01</span><span>Indie product</span><span class="r">Live · US / Canada</span></div>
+      <div class="p-head">
+        <div>
+          <h2 id="h-p01" class="p-title">Plotlume</h2>
+          <p class="p-deck">Short Reads. Lasting Feelings.</p>
+        </div>
+        <img class="p-icon" src="assets/hd/plotlume-icon.webp" width="512" height="512" alt="Plotlume app icon, a night owl" loading="lazy" decoding="async">
+      </div>
 
-  <section id="p04" aria-labelledby="h-p04" style="background:#FF8A3D;color:#0B0B0B;border-radius:28px;padding:clamp(20px,3.5vw,44px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:center">
-    <div style="flex:1 1 540px;min-width:0;display:flex;flex-direction:column;gap:12px">
-      <div style="background:#0B0B0B;border-radius:18px;overflow:hidden">
-        <img src="assets/img/juice.jpg" alt="Front and back of the meal-pairing juice pouch, brand 外卖达人" loading="lazy" style="height:auto">
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
-        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
-          <div class="player" data-video="assets/video/juice-line.mp4" style="aspect-ratio:9/16">
-            <img src="assets/img/juice-line-poster.jpg" alt="Pouches on the filling line at the contract factory" loading="lazy">
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
-              <button type="button" class="play" aria-label="Play the filling-line video" style="width:56px;height:56px;background:#FF8A3D"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg></button>
-            </div>
-          </div>
-          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">FILLING LINE · 0:09</figcaption>
-        </figure>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
-          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="assets/img/juice-factory.jpg" alt="Factory staff checking finished pouches" loading="lazy"></div>
-          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">QUALITY CHECK</figcaption>
-        </figure>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
-          <div style="aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0B0B0B"><img src="assets/img/juice-pour.jpg" alt="Carrot-orange juice pouring from a pouch into a glass" loading="lazy"></div>
-          <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">THE PRODUCT</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:20px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px">04 · FIRST VENTURE · BRAND “外卖达人”</div>
-      <h2 id="h-p04" style="margin:0;font-weight:500;font-size:clamp(40px,4.8vw,68px);line-height:0.95;letter-spacing:-0.045em">Juice made for takeout.</h2>
-      <p style="margin:0;text-wrap:pretty">My first venture after YE’S Finance: NFC, not-from-concentrate carrot, apple, lemon and avocado juice with zero additives, in a 100 mL spouted pouch — positioned as the drink that comes with a delivery meal.</p>
-      <p style="margin:0;text-wrap:pretty">Led product definition, formula and packaging end to end, and brought it into production with a licensed contract manufacturer.</p>
-      <p style="margin:0;text-wrap:pretty">Sold through our own online store, at ¥68 for a pack of 20.</p>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px">
-        <div style="background:#F5F5F0;border-radius:14px;overflow:hidden;border:1.5px solid #0B0B0B"><img src="assets/img/juice-order.jpg" alt="An order from the brand's online store: 10 packs at ¥68" loading="lazy" style="height:auto"></div>
-        <figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px">A REAL ORDER FROM THE STORE</figcaption>
+      <figure class="media">
+        <div class="player r169" data-video="assets/video/plotlume-promo.mp4">
+          <img src="assets/hd/plotlume-promo-poster.jpg" width="1920" height="1080" alt="Plotlume promo film title card: the owl logo and the line Short Reads. Lasting Feelings." loading="lazy" decoding="async">
+          <button type="button" class="play" aria-label="Play the Plotlume promo film, 30 seconds"><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>Play <span class="d">0:30</span></span></button>
+        </div>
+        <figcaption class="label"><b>Promo film</b>Plotlume · 16:9 · 0:30</figcaption>
       </figure>
-    </div>
-  </section>
 
-  <section id="experience" aria-labelledby="h-exp" style="background:#161616;border-radius:28px;padding:clamp(20px,3.5vw,44px)">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:24px">
-      <h2 id="h-exp" style="margin:0;font-weight:500;font-size:clamp(36px,4.4vw,60px);line-height:1;letter-spacing:-0.04em">Experience</h2>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">THREE PHASES · 2020 → NOW</span>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:28px">
-      <div>
-        <div style="display:flex;gap:12px;align-items:center;padding-bottom:10px;border-bottom:1.5px solid #C8F169"><span style="padding:3px 10px;background:#C8F169;color:#0B0B0B;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px">2024 – NOW</span><span style="font-weight:500">Independent ventures &amp; AI creation</span></div>
-        <div class="cv-row" style="padding:14px 0;border-bottom:1px solid #2A2A2A;font-size:15px"><span style="font-weight:500">Plotlume</span><span class="role" style="color:#8A8A85">Founder, solo developer</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">2026.09 –</span></div>
-        <div class="cv-row" style="padding:14px 0;border-bottom:1px solid #2A2A2A;font-size:15px"><span style="font-weight:500">Zhangxin Story Club</span><span class="role" style="color:#8A8A85">Contracted writer, AI director</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">Ongoing</span></div>
-        <div class="cv-row" style="padding:14px 0;font-size:15px"><span style="font-weight:500">Meal-pairing NFC juice</span><span class="role" style="color:#8A8A85">Founder</span><span></span></div>
+      <div class="grid pl-copy">
+        <p class="lead">An iOS app of complete English short romance for readers in the US and Canada. Every story has a free preview; a $3.99 monthly membership unlocks the library. Designed, built and shipped by me — every story in it is mine too.</p>
+        <ol class="points">
+          <li>Native SwiftUI; Sign in with Apple, Google or email code.</li>
+          <li>StoreKit 2 subscriptions, entitlements verified server-side.</li>
+          <li>TypeScript (Fastify) + PostgreSQL; custom CMS to import, preview, publish and roll back.</li>
+          <li>Took it through App Store review solo — answered queries, fixed and resubmitted after rejection.</li>
+          <li>v1.1.0, now on the App Store, adds the Watch channel: AI short dramas adapted from the novels. Rated 5.0.</li>
+        </ol>
       </div>
-      <div>
-        <div style="display:flex;gap:12px;align-items:center;padding-bottom:10px;border-bottom:1.5px solid #6B8CFF"><span style="padding:3px 10px;background:#6B8CFF;color:#0B0B0B;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px">2021 – 2022</span><span style="font-weight:500">Web3 &amp; early AI</span></div>
-        <div class="cv-row" style="padding:14px 0 6px;font-size:15px"><span style="font-weight:500">Youth DAO (青年DAO)</span><span class="role" style="color:#8A8A85">Co-founder</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">2021.12 – 2022.12</span></div>
-        <p style="margin:0;color:#B5B5AF;font-size:14px;max-width:760px;text-wrap:pretty">Non-profit and early AI adopter, endorsed by Sequoia Capital VP Du Yu and young author Zhang Ziming. Co-hosted Web3 events with metaverse societies at Tsinghua University and Berklee College of Music.</p>
+
+      <div class="phones" role="region" aria-label="Plotlume app screens" tabindex="0">
+        <figure>
+          <img src="assets/hd/plotlume-deck.webp" width="1260" height="2640" alt="Plotlume Discover tab: complete stories shown as a deck of cards, No Road Back to Us on top" loading="lazy" decoding="async">
+          <figcaption class="label"><b>Discover</b>Every story as a card in the deck</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/plotlume-reader.webp" width="1260" height="2640" alt="Plotlume reader open on the free preview of No Road Back to Us" loading="lazy" decoding="async">
+          <figcaption class="label"><b>Reader</b>Free preview, <i style="display:inline;font-size:15px">No Road Back to Us</i></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/plotlume-watch.webp" width="1260" height="2640" alt="Plotlume Watch tab with Five Years Too Late ready to continue" loading="lazy" decoding="async">
+          <figcaption class="label"><b>Watch</b>AI short dramas, new in v1.1.0</figcaption>
+        </figure>
       </div>
-      <div>
-        <div style="display:flex;gap:12px;align-items:center;padding-bottom:10px;border-bottom:1.5px solid #FF8A3D"><span style="padding:3px 10px;background:#FF8A3D;color:#0B0B0B;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px">2020 – 2023</span><span style="font-weight:500">Financial media &amp; project management</span></div>
-        <div class="cv-row" style="padding:14px 0 6px;font-size:15px"><span style="font-weight:500">YE’S Finance (叶檀财经)</span><span class="role" style="color:#8A8A85">Project manager</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">2023.06 – 2023.12</span></div>
-        <p style="margin:0 0 8px;color:#B5B5AF;font-size:14px;max-width:760px;text-wrap:pretty">Led the annual flagship event; drove documentary <i>The Power of Small</i> end to end to release on Tencent Video; coordinated a 101-day sleep trial with listed company Keeson’s 舒福德 smart beds.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,180px));gap:12px;margin:4px 0 12px">
-          <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#0B0B0B"><img src="assets/img/yetan-video.jpg" alt="A YE’S Finance video explainer on battery technology" loading="lazy" style="object-position:top"></div><figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">VIDEO PROGRAMME</figcaption></figure>
-          <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#0B0B0B"><img src="assets/img/yetan-sleep-trial.jpg" alt="Poster for the 101-day sleep trial, YE’S Finance × Keeson’s 舒福德 smart beds" loading="lazy" style="object-position:top"></div><figcaption style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">101-DAY SLEEP TRIAL</figcaption></figure>
+
+      <div class="grid store">
+        <a class="store-shot" href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener">
+          <img src="assets/hd/plotlume-appstore.jpg" width="923" height="830" alt="Plotlume on the App Store: listing showing a 5.0 rating, version 1.1.0, developer Guo Yutong" loading="lazy" decoding="async">
+          <span class="label" style="display:block"><b>App Store listing ↗</b>Version 1.1.0 · rated 5.0</span>
+        </a>
+        <div class="store-side">
+          <dl class="facts">
+            <div><dt>Version</dt><dd>1.1.0</dd></div>
+            <div><dt>Rating</dt><dd>5.0</dd></div>
+            <div><dt>Membership</dt><dd>$3.99<small>per month</small></dd></div>
+            <div><dt>Markets</dt><dd>US, Canada</dd></div>
+          </dl>
+          <p class="tags"><b>Built with</b> SwiftUI · TypeScript · PostgreSQL · StoreKit 2 · AI-assisted coding</p>
+          <div class="actions">
+            <a class="btn" href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener">App Store <span aria-hidden="true">↗</span></a>
+            <a class="btn ghost" href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener">Read the stories online <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="cv-row" style="padding:14px 0 6px;border-top:1px solid #2A2A2A;font-size:15px"><span style="font-weight:500">Wizard Finance</span><span class="role" style="color:#8A8A85">Project manager</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">2020.10 – 2021.10</span></div>
-        <p style="margin:0 0 8px;color:#B5B5AF;font-size:14px;max-width:760px;text-wrap:pretty">Led Harvest Fund’s annual brand campaign — 5 departments, 12 features. Ran a 10-person cross-functional team; execution efficiency +35%, client satisfaction 98%.</p>
-        <div class="cv-row" style="padding:14px 0 6px;border-top:1px solid #2A2A2A;font-size:15px"><span style="font-weight:500">Rhino Finance</span><span class="role" style="color:#8A8A85">Reporting intern</span><span style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8A8A85">2020.04 – 2020.06</span></div>
-        <p style="margin:0;color:#B5B5AF;font-size:14px;max-width:760px;text-wrap:pretty">Screened 30+ financial stories a day into 5–8 pitches; delivered a weekly topic slate.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" aria-label="Skills" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px">
-    <div style="background:#FF7AB6;color:#0B0B0B;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px">SKILL / 01</div>
-      <h3 style="margin:0;font-weight:500;font-size:32px;line-height:1;letter-spacing:-0.03em">AI filmmaking</h3>
-      <p style="margin:0;font-size:15px;text-wrap:pretty">Video with Seedance 2.5; images with Midjourney and Flux. Trained in prompt engineering, clear on what AI can and can’t do for text and image. Runs the whole pipeline solo on a self-built canvas.</p>
-    </div>
-    <div style="background:#6B8CFF;color:#0B0B0B;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px">SKILL / 02</div>
-      <h3 style="margin:0;font-weight:500;font-size:32px;line-height:1;letter-spacing:-0.03em">Content &amp; writing</h3>
-      <p style="margin:0;font-size:15px;text-wrap:pretty">Contracted fiction writer with financial-media reporting experience. Writes in Chinese, rewrites in English, and carries a story from page to screen.</p>
-    </div>
-    <div style="background:#C8F169;color:#0B0B0B;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px">SKILL / 03</div>
-      <h3 style="margin:0;font-weight:500;font-size:32px;line-height:1;letter-spacing:-0.03em">Product &amp; projects</h3>
-      <p style="margin:0;font-size:15px;text-wrap:pretty">Built and shipped a full-stack iOS subscription app with AI-assisted coding. Two 0→1 ventures. Led cross-functional projects and client relationships.</p>
-    </div>
-  </section>
+    <!-- 02 Five Years Too Late -->
+    <section id="p02" aria-labelledby="h-p02">
+      <div class="folio"><span class="n">02</span><span>AI directing</span><span class="r">Streaming in Plotlume</span></div>
+      <div class="p-head">
+        <div>
+          <h2 id="h-p02" class="p-title">Five Years Too&nbsp;Late</h2>
+          <p class="p-deck">A live-action-style AI short drama, adapted from my own novel.</p>
+        </div>
+      </div>
+
+      <figure class="media">
+        <div class="player r219" data-video="assets/video/fytl-ep1.mp4">
+          <img src="assets/hd/fytl-ep1-poster.jpg" width="1920" height="823" alt="Still from Five Years Too Late, episode 1: a woman in a moonlit seaside villa, subtitled “This was the villa we had chosen together as our”" loading="lazy" decoding="async">
+          <button type="button" class="play" aria-label="Play Five Years Too Late, episode 1, 2 minutes"><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>Play episode 1 <span class="d">2:00</span></span></button>
+        </div>
+        <figcaption class="label"><b>Featured · Episode 1</b>AI short drama · 21:9 · 2:00</figcaption>
+      </figure>
+
+      <div class="grid fy-copy">
+        <div class="body">
+          <p class="lead">Written, directed and produced by me on a self-built AI production canvas — picture and sound generated together in one pass by Seedance&nbsp;2.5.</p>
+          <p class="tags"><b>Tools</b> Seedance 2.5 · Midjourney · Flux · Prompt engineering</p>
+        </div>
+        <div class="pipe">
+          <p class="kicker" style="margin:0">Pipeline, solo</p>
+          <ol>
+            <li>Adaptation</li>
+            <li>Character sheets</li>
+            <li>Shot generation</li>
+            <li>Edit</li>
+          </ol>
+          <p>Scripts, sheets, assets and cuts live on one canvas. Vertical promos for every story come from a generator tool I wrote.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Writing -->
+    <section id="p03" aria-labelledby="h-p03">
+      <div class="folio"><span class="n">03</span><span>Writing</span><span class="r">Contracted writer</span></div>
+      <div class="p-head">
+        <div>
+          <h2 id="h-p03" class="p-title">12 stories. <em>All mine.</em></h2>
+          <p class="p-deck">Emotional short romance — betrayal, regret, starting over.</p>
+        </div>
+      </div>
+
+      <div class="covers media">
+        <figure>
+          <img src="assets/hd/cover-no-road.jpg" width="1024" height="1536" alt="Cover of No Road Back to Us: an empty wheelchair in a dark hallway" loading="lazy" decoding="async">
+          <figcaption class="label"><i>No Road Back to Us</i></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/cover-married-boss.jpg" width="1024" height="1536" alt="Cover of I Married His Boss: a couple in evening wear against a city skyline" loading="lazy" decoding="async">
+          <figcaption class="label"><i>I Married His Boss</i></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/cover-light-green.jpg" width="1024" height="1536" alt="Cover of When the Light Turns Green: a woman with an umbrella on a rainy street at night" loading="lazy" decoding="async">
+          <figcaption class="label"><i>When the Light Turns Green</i></figcaption>
+        </figure>
+      </div>
+
+      <div class="grid wr-copy">
+        <div class="body">
+          <p class="lead">Contracted writer at Zhangxin Story Club (<span class="zh" lang="zh-CN">掌心故事会</span>), writing emotional short romance of 9,000–12,000 characters each.</p>
+          <p style="margin-top:20px">I rewrite my own work in English: 12 titles are in the Plotlume library, with covers I designed.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Rate</dt><dd>¥40<small>per 1,000 characters</small></dd></div>
+          <div><dt>In English</dt><dd>12 titles<small>in the Plotlume library</small></dd></div>
+          <div><dt>Length</dt><dd>9,000–12,000<small>characters per story</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 04 Juice -->
+    <section id="p04" aria-labelledby="h-p04">
+      <div class="folio"><span class="n">04</span><span>First venture</span><span class="r">Brand “<span class="zh" lang="zh-CN">外卖达人</span>”</span></div>
+      <div class="p-head">
+        <div>
+          <h2 id="h-p04" class="p-title">Juice made for <em>takeout.</em></h2>
+        </div>
+      </div>
+
+      <div class="grid ju-a media">
+        <figure class="ju-pack">
+          <img src="assets/hd/juice.jpg" width="1250" height="1077" alt="Front and back of the meal-pairing juice pouch, brand 外卖达人" loading="lazy" decoding="async">
+          <figcaption class="label"><b>The pouch</b>100 mL spouted pouch, front and back</figcaption>
+        </figure>
+        <div class="body">
+          <p>My first venture after YE’S Finance: NFC, not-from-concentrate carrot, apple, lemon and avocado juice with zero additives, in a 100 mL spouted pouch — positioned as the drink that comes with a delivery meal.</p>
+          <p>Led product definition, formula and packaging end to end, and brought it into production with a licensed contract manufacturer.</p>
+        </div>
+      </div>
+
+      <div class="trip">
+        <figure>
+          <div class="player r916" data-video="assets/video/juice-line.mp4">
+            <img src="assets/hd/juice-line-poster.jpg" width="540" height="960" alt="Pouches on the filling line at the contract factory" loading="lazy" decoding="async">
+            <button type="button" class="play" aria-label="Play the filling-line video, 9 seconds"><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>Play <span class="d">0:09</span></span></button>
+          </div>
+          <figcaption class="label"><b>Filling line</b>Contract factory · 0:09</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/juice-factory.jpg" width="1080" height="1440" alt="Factory staff checking finished pouches" loading="lazy" decoding="async">
+          <figcaption class="label"><b>Quality check</b>Finished pouches</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/hd/juice-pour.jpg" width="1080" height="1450" alt="Carrot-orange juice pouring from a pouch into a glass" loading="lazy" decoding="async">
+          <figcaption class="label"><b>The product</b>Carrot, apple, lemon, avocado</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid ju-b">
+        <figure class="ju-order">
+          <img src="assets/hd/juice-order.jpg" width="1062" height="425" alt="An order from the brand's online store: 10 packs at ¥68" loading="lazy" decoding="async">
+          <figcaption class="label"><b>A real order from the store</b>10 packs at ¥68</figcaption>
+        </figure>
+        <dl class="facts">
+          <div><dt>Price</dt><dd>¥68<small>per pack of 20, sold through our own online store</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="h-exp">
+      <div class="folio"><span>CV</span><span class="r">Three phases · 2020 → now</span></div>
+      <h2 id="h-exp" class="exp-title">Experience</h2>
+      <div class="phases">
+        <div class="phase">
+          <div><p class="when">2024 – now</p><h3>Independent ventures &amp; AI creation</h3></div>
+          <ol class="jobs">
+            <li class="job"><div class="job-head"><span class="job-org">Plotlume</span><span class="job-role">Founder, solo developer</span><span class="job-date">2026.09 –</span></div></li>
+            <li class="job"><div class="job-head"><span class="job-org">Zhangxin Story Club</span><span class="job-role">Contracted writer, AI director</span><span class="job-date">Ongoing</span></div></li>
+            <li class="job"><div class="job-head"><span class="job-org">Meal-pairing NFC juice</span><span class="job-role">Founder</span></div></li>
+          </ol>
+        </div>
+        <div class="phase">
+          <div><p class="when">2021 – 2022</p><h3>Web3 &amp; early AI</h3></div>
+          <ol class="jobs">
+            <li class="job">
+              <div class="job-head"><span class="job-org">Youth DAO (<span class="zh" lang="zh-CN">青年DAO</span>)</span><span class="job-role">Co-founder</span><span class="job-date">2021.12 – 2022.12</span></div>
+              <p>Non-profit and early AI adopter, endorsed by Sequoia Capital VP Du Yu and young author Zhang Ziming. Co-hosted Web3 events with metaverse societies at Tsinghua University and Berklee College of Music.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="phase">
+          <div><p class="when">2020 – 2023</p><h3>Financial media &amp; project management</h3></div>
+          <ol class="jobs">
+            <li class="job">
+              <div class="job-head"><span class="job-org">YE’S Finance (<span class="zh" lang="zh-CN">叶檀财经</span>)</span><span class="job-role">Project manager</span><span class="job-date">2023.06 – 2023.12</span></div>
+              <p>Led the annual flagship event; drove documentary <i>The Power of Small</i> end to end to release on Tencent Video; coordinated a 101-day sleep trial with listed company Keeson’s <span class="zh" lang="zh-CN">舒福德</span> smart beds.</p>
+              <div class="gallery">
+                <figure>
+                  <img src="assets/hd/yetan-video.jpg" width="1184" height="2000" alt="A YE’S Finance video explainer on battery technology" loading="lazy" decoding="async">
+                  <figcaption class="label"><b>Video programme</b>YE’S Finance</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/hd/yetan-sleep-trial.jpg" width="1145" height="2000" alt="Poster for the 101-day sleep trial, YE’S Finance × Keeson’s 舒福德 smart beds" loading="lazy" decoding="async">
+                  <figcaption class="label"><b>101-day sleep trial</b>With Keeson’s <span class="zh" lang="zh-CN">舒福德</span></figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="job">
+              <div class="job-head"><span class="job-org">Wizard Finance</span><span class="job-role">Project manager</span><span class="job-date">2020.10 – 2021.10</span></div>
+              <p>Led Harvest Fund’s annual brand campaign — 5 departments, 12 features. Ran a 10-person cross-functional team; execution efficiency +35%, client satisfaction 98%.</p>
+            </li>
+            <li class="job">
+              <div class="job-head"><span class="job-org">Rhino Finance</span><span class="job-role">Reporting intern</span><span class="job-date">2020.04 – 2020.06</span></div>
+              <p>Screened 30+ financial stories a day into 5–8 pitches; delivered a weekly topic slate.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="h-skills">
+      <div class="folio"><h2 id="h-skills">Skills</h2><span class="r">Three disciplines</span></div>
+      <div class="skills">
+        <div class="skill">
+          <span class="n">i.</span>
+          <h3>AI filmmaking</h3>
+          <p>Video with Seedance 2.5; images with Midjourney and Flux. Trained in prompt engineering, clear on what AI can and can’t do for text and image. Runs the whole pipeline solo on a self-built canvas.</p>
+        </div>
+        <div class="skill">
+          <span class="n">ii.</span>
+          <h3>Content &amp; writing</h3>
+          <p>Contracted fiction writer with financial-media reporting experience. Writes in Chinese, rewrites in English, and carries a story from page to screen.</p>
+        </div>
+        <div class="skill">
+          <span class="n">iii.</span>
+          <h3>Product &amp; projects</h3>
+          <p>Built and shipped a full-stack iOS subscription app with AI-assisted coding. Two 0→1 ventures. Led cross-functional projects and client relationships.</p>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="contact" style="background:#161616;border-radius:28px;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:32px">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8A8A85">CONTACT</div>
-    <a href="mailto:guoyutong110@gmail.com" style="font-weight:500;font-size:clamp(30px,5.6vw,80px);line-height:1;letter-spacing:-0.045em;color:#C8F169;word-break:break-all">guoyutong110@gmail.com</a>
-    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2A2A2A;padding-top:16px;font-size:13px;color:#8A8A85">
-      <span>Open to roles worldwide · Remote or relocation</span>
-      <span style="display:flex;gap:16px;flex-wrap:wrap"><a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener">Plotlume on the App Store ↗</a><a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener">Plotlume stories ↗</a></span>
+  <footer id="contact" class="wrap contact" aria-labelledby="h-contact">
+    <div class="folio"><h2 id="h-contact">Contact</h2><span class="r">Kunming (UTC+8) → Worldwide</span></div>
+    <a class="mail" href="mailto:guoyutong110@gmail.com">guoyutong110@gmail.com</a>
+    <div><button type="button" class="copy" data-copy="guoyutong110@gmail.com" data-done="Copied" hidden>Copy email</button></div>
+    <div class="grid contact-meta">
+      <div class="contact-links">
+        <a href="https://apps.apple.com/us/app/plotlume/id6811896292" target="_blank" rel="noopener"><span>Plotlume on the App Store</span><span aria-hidden="true">↗</span></a>
+        <a href="https://api.plotlume.cuipi.xyz/stories" target="_blank" rel="noopener"><span>Plotlume stories</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="colophon">
       <span>© 2026 Guo Yutong</span>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+  </div>
+</div>
 
-</div>
-</div>
-<script src="assets/site.js"></script>
+<script>
+(function () {
+  // Click-to-play: swap the poster for a real <video> only when asked.
+  var videos = [];
+  document.querySelectorAll('.player').forEach(function (player) {
+    var button = player.querySelector('.play');
+    var poster = player.querySelector('img');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      var src = player.getAttribute('data-video') || '';
+      if (!src) {
+        var note = document.createElement('p');
+        note.className = 'chip';
+        note.textContent = player.getAttribute('data-pending') || 'Video coming soon';
+        button.replaceWith(note);
+        return;
+      }
+      if (/youtube|youtu\.be|vimeo/.test(src)) {
+        var f = document.createElement('iframe');
+        f.src = src; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+        f.title = (button.getAttribute('aria-label') || 'Video').replace(/^Play /, '');
+        f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+        player.appendChild(f); button.remove(); f.focus();
+        return;
+      }
+      var v = document.createElement('video');
+      v.src = src;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute('playsinline', '');
+      v.preload = 'auto';
+      if (poster) v.poster = poster.currentSrc || poster.src;
+      v.setAttribute('aria-label', (button.getAttribute('aria-label') || 'Video').replace(/^Play /, ''));
+      v.addEventListener('play', function () {
+        videos.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+      });
+      videos.push(v);
+      player.appendChild(v);
+      button.remove();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+      v.focus();
+    });
+  });
+
+  // Copy email, only where the clipboard is available.
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    if (!(navigator.clipboard && window.isSecureContext)) return;
+    b.hidden = false;
+    var label = b.textContent;
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () {
+        b.textContent = b.getAttribute('data-done');
+        setTimeout(function () { b.textContent = label; }, 1600);
+      }).catch(function () {});
+    });
+  });
+
+  // Mark the nav item for the section being read.
+  var links = {};
+  document.querySelectorAll('[data-nav]').forEach(function (a) { links[a.getAttribute('data-nav')] = a; });
+  var groups = { work: 'work', p01: 'work', p02: 'work', p03: 'work', p04: 'work', experience: 'cv', skills: 'cv', contact: 'contact' };
+  function mark(key) {
+    Object.keys(links).forEach(function (k) {
+      if (k === key) links[k].setAttribute('aria-current', 'location');
+      else links[k].removeAttribute('aria-current');
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) mark(groups[e.target.id] || null); });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(groups).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+    var hero = document.querySelector('.hero');
+    if (hero) new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) mark(null); });
+    }, { rootMargin: '-40% 0px -55% 0px' }).observe(hero);
+  }
+})();
+</script>
 </body>
 </html>
